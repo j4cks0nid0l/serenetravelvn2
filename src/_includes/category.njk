@@ -1,0 +1,42 @@
+{% extends "base.njk" %}
+
+{% block content %}
+{% set items = collections.services | servicesIn(cat.slug) %}
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Serene Travel</p>
+    <h1 class="page-title">{{ cat.name }}</h1>
+    <p class="page-lead">{{ cat.description }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% if items.length %}
+    <div class="card-grid">
+      {% for s in items %}
+      <a class="card" href="{{ s.url }}">
+        <h2 class="card-title">{{ s.data.title }}</h2>
+        {% if s.data.description %}<p class="card-desc">{{ s.data.description }}</p>{% endif %}
+        <span class="card-link">Xem chi tiết →</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-state">Nội dung cho mục này đang được cập nhật. Vui lòng liên hệ Zalo <a href="{{ site.zaloUrl }}" target="_blank" rel="noopener">{{ site.phone }}</a> để được tư vấn.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>Cần tư vấn lịch trình phù hợp?</h2>
+      <p>Hãy để lại thông tin, Serene Travel sẽ liên hệ trong vòng 24 giờ.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/#contact" class="btn btn-primary">Gửi yêu cầu tư vấn</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

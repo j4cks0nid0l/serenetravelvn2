@@ -1,0 +1,49 @@
+---
+title: Cẩm nang du lịch
+description: Kinh nghiệm, gợi ý lịch trình và thông tin hữu ích cho chuyến đi Nha Trang và các điểm đến khác từ Serene Travel.
+permalink: /cam-nang/
+---
+{% extends "base.njk" %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Serene Travel</p>
+    <h1 class="page-title">Cẩm nang du lịch</h1>
+    <p class="page-lead">Kinh nghiệm, gợi ý lịch trình và thông tin hữu ích cho chuyến đi của anh/chị.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% set posts = collections.posts %}
+    {% if posts.length %}
+    <div class="card-grid">
+      {% for post in posts %}
+      <a class="card" href="{{ post.url }}">
+        {% if post.data.image %}<img class="card-img" src="{{ post.data.image }}" alt="" loading="lazy">{% endif %}
+        <p class="card-meta">{{ post.date | viDate }}</p>
+        <h2 class="card-title">{{ post.data.title }}</h2>
+        {% if post.data.description %}<p class="card-desc">{{ post.data.description }}</p>{% endif %}
+        <span class="card-link">Đọc tiếp →</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-state">Bài viết đang được cập nhật. Hãy quay lại sớm nhé!</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>Cần tư vấn lịch trình phù hợp?</h2>
+      <p>Hãy để lại thông tin, Serene Travel sẽ liên hệ trong vòng 24 giờ.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/#contact" class="btn btn-primary">Gửi yêu cầu tư vấn</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

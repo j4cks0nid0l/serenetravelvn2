@@ -1,0 +1,30 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    {% if eyebrow %}<p class="section-label">{{ eyebrow }}</p>{% endif %}
+    <h1 class="page-title">{{ title }}</h1>
+    {% if description %}<p class="page-lead">{{ description }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    {{ content | safe }}
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>Cần tư vấn lịch trình phù hợp?</h2>
+      <p>Hãy để lại thông tin, Serene Travel sẽ liên hệ trong vòng 24 giờ.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/#contact" class="btn btn-primary">Gửi yêu cầu tư vấn</a>
+      <a href="{{ site.zaloUrl }}" target="_blank" rel="noopener" class="btn btn-ghost">Chat Zalo</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

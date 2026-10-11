@@ -1,0 +1,16 @@
+{
+  "name": "serene-travel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Serene Travel - Nha Trang",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,275 @@
+---
+title: Trang chủ
+description: Serene Travel - Du lịch cá nhân hoá tại Nha Trang. Combo Vinpearl, khách sạn, resort, tour trong ngày, vé và thuê xe. Serene, not standard.
+---
+{% extends "base.njk" %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <p class="hero-eyebrow reveal">✦ Du lịch cá nhân hoá · Nha Trang</p>
+      <h1 class="hero-title reveal">
+        Trải nghiệm<br>
+        <span class="italic">xứng tầm</span><br>
+        với anh/chị
+      </h1>
+      <p class="hero-subtitle reveal">{{ site.tagline }}</p>
+      <p class="hero-desc reveal">
+        Mỗi hành trình được thiết kế riêng — từ phòng khách sạn phù hợp đến những trải nghiệm chuyên biệt cho mỗi gia đình.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">Đặt lịch tư vấn</a>
+        <a href="#services" class="btn btn-ghost">Xem dịch vụ</a>
+      </div>
+    </div>
+
+    <div class="hero-right reveal">
+      <div class="hero-slideshow" aria-hidden="true">
+        <div class="slide active" style="background-image:url('/images/hero-1.jpg')"></div>
+        <div class="slide" style="background-image:url('/images/hero-2.jpg')"></div>
+        <div class="slide" style="background-image:url('/images/hero-3.jpg')"></div>
+      </div>
+      <div class="slide-overlay" aria-hidden="true"></div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">2<span>+</span></div><div class="stat-label">Năm kinh nghiệm</div></div>
+        <div class="stat-item"><div class="stat-num">500<span>+</span></div><div class="stat-label">Khách hài lòng</div></div>
+        <div class="stat-item"><div class="stat-num">100<span>%</span></div><div class="stat-label">Cá nhân hoá</div></div>
+        <div class="stat-item"><div class="stat-num">24h</div><div class="stat-label">Hỗ trợ</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" aria-label="Hình ảnh điểm đến">
+  <div class="gallery-grid">
+    <figure class="g-item g-tall" style="background-image:url('/images/gallery-marriott.jpg')"><figcaption class="g-label">Marriott Hòn Tre</figcaption></figure>
+    <figure class="g-item" style="background-image:url('/images/gallery-vinpearl.jpg')"><figcaption class="g-label">Vinpearl Resort</figcaption></figure>
+    <figure class="g-item" style="background-image:url('/images/gallery-pool.jpg')"><figcaption class="g-label">Hồ bơi về đêm</figcaption></figure>
+    <figure class="g-item" style="background-image:url('/images/gallery-cablecar.jpg')"><figcaption class="g-label">Cáp treo Vinpearl</figcaption></figure>
+    <figure class="g-item" style="background-image:url('/images/gallery-beach-activity.jpg')"><figcaption class="g-label">Trải nghiệm biển</figcaption></figure>
+    <figure class="g-item g-tall" style="background-image:url('/images/gallery-nhatrang-beach.jpg')"><figcaption class="g-label">Biển Nha Trang</figcaption></figure>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <figure class="founder-photo-wrap">
+        <img src="/images/founder.jpg" alt="Nguyễn Duy Hà - Founder Serene Travel" class="founder-photo" loading="lazy">
+        <figcaption class="founder-badge">
+          <span class="founder-name">Nguyễn Duy Hà</span>
+          <span class="founder-role">Founder · Serene Travel</span>
+        </figcaption>
+      </figure>
+      <blockquote class="about-card-small">
+        <p class="about-quote">"Mỗi chuyến đi nên là một câu chuyện riêng — đừng để đó chỉ là bản sao của hàng ngàn chuyến đi khác."</p>
+      </blockquote>
+    </div>
+    <div class="about-text">
+      <p class="section-label reveal">Câu chuyện của chúng tôi</p>
+      <h2 class="section-title reveal">Chúng tôi tin vào<br>sự <span class="italic">khác biệt</span></h2>
+      <p class="section-body reveal">Serene Travel ra đời từ niềm tin rằng du lịch không nên là dây chuyền lắp ráp. Mỗi khách hàng có những sở thích, ngân sách và kỳ vọng khác nhau — và họ xứng đáng được phục vụ đúng theo điều đó.</p>
+      <p class="section-body reveal">Chúng tôi đặt tại Nha Trang — trái tim du lịch biển miền Trung — với đội ngũ am hiểu sâu về địa phương và kết nối với những đối tác chất lượng nhất.</p>
+      <div class="stats-inline reveal">
+        <div>
+          <div class="stats-num">100%</div>
+          <div class="stats-label">Tư vấn cá nhân</div>
+        </div>
+        <div>
+          <div class="stats-num">24h</div>
+          <div class="stats-label">Hỗ trợ phản hồi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label reveal">Dịch vụ của chúng tôi</p>
+      <h2 class="section-title reveal">Mọi dịch vụ —<br><span class="italic">một tâm huyết</span></h2>
+    </div>
+    <div class="services-grid">
+      <a class="service-card reveal" href="/dich-vu/combo-vinpearl/">
+        <span class="service-icon" aria-hidden="true">🏖️</span>
+        <h3 class="service-name">Combo Vinpearl</h3>
+        <p class="service-desc">Voucher Vinpearl toàn quốc, giá ưu đãi, combo bao gồm Vinwonders, resort nghỉ dưỡng hoặc khách sạn.</p>
+        <ul class="service-features">
+          <li>Voucher Vinpearl toàn quốc</li>
+          <li>Combo khách sạn + Vinwonders</li>
+          <li>Combo resort + Vinwonders</li>
+        </ul>
+      </a>
+      <a class="service-card reveal" href="/khach-san-resort/" style="transition-delay:.1s">
+        <span class="service-icon" aria-hidden="true">🏨</span>
+        <h3 class="service-name">Khách sạn / Resort</h3>
+        <p class="service-desc">Tư vấn và đặt phòng phù hợp - Từ resort ven biển đến khách sạn từ 3 đến 5 sao trên toàn quốc.</p>
+        <ul class="service-features">
+          <li>Phù hợp cặp đôi & gia đình</li>
+          <li>Khách sạn 3-5 sao toàn quốc</li>
+          <li>Resort ven biển cao cấp</li>
+          <li>Ưu đãi đặc biệt từ đối tác</li>
+        </ul>
+      </a>
+      <a class="service-card reveal" href="/dich-vu/tour-trong-ngay/" style="transition-delay:.2s">
+        <span class="service-icon" aria-hidden="true">⛵</span>
+        <h3 class="service-name">Tour trong ngày</h3>
+        <p class="service-desc">Tour riêng hoặc ghép được lên kế hoạch chi tiết, đa dạng lịch trình, đảm bảo trải nghiệm đáng nhớ tại mọi điểm đến.</p>
+        <ul class="service-features">
+          <li>Tour 1 đến 3 đảo</li>
+          <li>City Tour</li>
+          <li>Tour trong tỉnh & liên tỉnh</li>
+          <li>Private Tour</li>
+        </ul>
+      </a>
+      <a class="service-card reveal" href="/dich-vu/cac-loai-ve/" style="transition-delay:.3s">
+        <span class="service-icon" aria-hidden="true">🎫</span>
+        <h3 class="service-name">Các loại vé</h3>
+        <p class="service-desc">Đặt vé nhanh chóng, tiện lợi - Đa dạng phương tiện và điểm tham quan trên toàn quốc.</p>
+        <ul class="service-features">
+          <li>Vé máy bay giá tốt</li>
+          <li>Vé tàu, vé xe</li>
+          <li>Vé tham quan các điểm</li>
+          <li>Xuất nhanh 24/7</li>
+        </ul>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section why" id="why">
+  <div class="container why-grid">
+    <div>
+      <p class="section-label reveal">Lý do lựa chọn</p>
+      <h2 class="why-title reveal">Tại sao<br><span class="italic">Serene</span><br>Travel?</h2>
+    </div>
+    <ol class="why-items">
+      <li class="why-item reveal">
+        <span class="why-num" aria-hidden="true">01</span>
+        <div>
+          <h3>Cá nhân hoá hoàn toàn</h3>
+          <p>Mọi gói dịch vụ đều được tư vấn và thiết kế riêng theo nhu cầu thực tế của anh/chị — không copy-paste từ bất kỳ khách hàng nào khác.</p>
+        </div>
+      </li>
+      <li class="why-item reveal" style="transition-delay:.1s">
+        <span class="why-num" aria-hidden="true">02</span>
+        <div>
+          <h3>Am hiểu địa phương</h3>
+          <p>Đặt tại Nha Trang, chúng tôi có kiến thức và mạng lưới đối tác rộng — để đảm bảo anh/chị có những lựa chọn tốt nhất, không phải những thứ "bán được nhiều nhất".</p>
+        </div>
+      </li>
+      <li class="why-item reveal" style="transition-delay:.2s">
+        <span class="why-num" aria-hidden="true">03</span>
+        <div>
+          <h3>Minh bạch, rõ ràng</h3>
+          <p>Giá cả và dịch vụ được thông báo rõ ràng từ đầu. Không phí ẩn, không phát sinh ngoài mong muốn trong chuyến đi của anh/chị.</p>
+        </div>
+      </li>
+      <li class="why-item reveal" style="transition-delay:.3s">
+        <span class="why-num" aria-hidden="true">04</span>
+        <div>
+          <h3>Đồng hành trước và sau</h3>
+          <p>Chúng tôi không biến mất sau khi bạn đặt dịch vụ. Hỗ trợ từ lúc tư vấn đến khi anh/chị về đến nhà an toàn.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- MOMENTS -->
+<section class="section moments">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label reveal">Khoảnh khắc thực tế</p>
+      <h2 class="section-title reveal">Những chuyến đi<br><span class="italic">đáng nhớ</span></h2>
+    </div>
+    <div class="moments-grid">
+      <div class="m-item m-wide" style="background-image:url('/images/moment-1.jpg')" role="img" aria-label="Khoảnh khắc chuyến đi 1"></div>
+      <div class="m-item" style="background-image:url('/images/moment-2.jpg')" role="img" aria-label="Khoảnh khắc chuyến đi 2"></div>
+      <div class="m-item" style="background-image:url('/images/moment-3.jpg')" role="img" aria-label="Khoảnh khắc chuyến đi 3"></div>
+      <div class="m-item m-wide" style="background-image:url('/images/moment-4.jpg')" role="img" aria-label="Khoảnh khắc chuyến đi 4"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <p class="section-label reveal">Liên hệ</p>
+      <h2 class="section-title reveal">Sẵn sàng lên kế hoạch<br>cho <span class="italic">hành trình</span><br>của anh/chị?</h2>
+      <p class="section-body reveal">Hãy để lại thông tin hoặc liên hệ trực tiếp qua Zalo để được tư vấn miễn phí. Chúng tôi sẽ phản hồi trong vòng 24 giờ.</p>
+      <ul class="contact-details reveal">
+        <li class="contact-item">
+          <span class="contact-icon" aria-hidden="true">📍</span>
+          <div>
+            <div class="contact-label">Địa chỉ</div>
+            <div class="contact-value">{{ site.address }}</div>
+          </div>
+        </li>
+        <li class="contact-item">
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <div>
+            <div class="contact-label">Điện thoại / Zalo</div>
+            <div class="contact-value"><a href="{{ site.zaloUrl }}" target="_blank" rel="noopener">{{ site.phone }}</a></div>
+          </div>
+        </li>
+        <li class="contact-item">
+          <span class="contact-icon" aria-hidden="true">🕐</span>
+          <div>
+            <div class="contact-label">Giờ làm việc</div>
+            <div class="contact-value">{{ site.hours }}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="contact-form-wrap reveal">
+      <h3 class="form-title">Gửi yêu cầu tư vấn</h3>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="f-name">Họ và tên *</label>
+          <input id="f-name" name="name" type="text" placeholder="Nguyễn Văn A" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label for="f-phone">Số điện thoại / Zalo *</label>
+          <input id="f-phone" name="phone" type="tel" placeholder="0900 000 000" autocomplete="tel" required>
+        </div>
+        <div class="form-group">
+          <label for="f-service">Dịch vụ quan tâm</label>
+          <select id="f-service" name="service">
+            <option value="">— Chọn dịch vụ —</option>
+            <option>Combo Vinpearl</option>
+            <option>Khách sạn / Resort</option>
+            <option>Tour trong ngày</option>
+            <option>Các loại vé</option>
+            <option>Vận chuyển (xe máy, ô tô, cano)</option>
+            <option>Căn hộ - Villa</option>
+            <option>Khác</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="f-note">Nội dung yêu cầu</label>
+          <textarea id="f-note" name="note" rows="4" placeholder="Ngày đi, số người, điểm đến, yêu cầu đặc biệt..."></textarea>
+        </div>
+        <!-- Ô ẩn dành cho bot, người dùng không thấy -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="f-website">Website</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="form-submit">Gửi yêu cầu tư vấn →</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

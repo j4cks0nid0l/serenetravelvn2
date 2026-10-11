@@ -1,0 +1,30 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<article class="section article">
+  <div class="container article-inner">
+    <p class="article-meta">
+      <a href="/cam-nang/">Cẩm nang du lịch</a>
+      {% if date %} · <time datetime="{{ date | isoDate }}">{{ date | viDate }}</time>{% endif %}
+    </p>
+    <h1 class="page-title">{{ title }}</h1>
+    {% if description %}<p class="page-lead">{{ description }}</p>{% endif %}
+    {% if image %}<img class="article-cover" src="{{ image }}" alt="{{ title }}" loading="lazy">{% endif %}
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>Cần tư vấn lịch trình phù hợp?</h2>
+      <p>Hãy để lại thông tin, Serene Travel sẽ liên hệ trong vòng 24 giờ.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/#contact" class="btn btn-primary">Gửi yêu cầu tư vấn</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

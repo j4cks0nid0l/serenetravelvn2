@@ -1,0 +1,105 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Ảnh tải lên từ trang quản trị sẽ được lưu vào đây
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+locale: "vi"
+
+collections:
+  # ---------- Thông tin công ty ----------
+  - name: "settings"
+    label: "Thông tin công ty"
+    files:
+      - name: "site"
+        label: "Thông tin liên hệ & mạng xã hội"
+        file: "src/_data/site.json"
+        format: "json"
+        fields:
+          - { label: "Tên công ty", name: "name", widget: "string" }
+          - { label: "Slogan", name: "tagline", widget: "string" }
+          - { label: "Mô tả cho công cụ tìm kiếm (SEO)", name: "defaultDescription", widget: "text" }
+          - { label: "Số điện thoại hiển thị", name: "phone", widget: "string" }
+          - { label: "Số điện thoại (chỉ số, dùng để gọi)", name: "phoneRaw", widget: "string" }
+          - { label: "Link Zalo", name: "zaloUrl", widget: "string" }
+          - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "Địa chỉ", name: "address", widget: "string" }
+          - { label: "Giờ làm việc", name: "hours", widget: "string" }
+          - { label: "Link Facebook", name: "facebook", widget: "string" }
+          - { label: "Link TikTok", name: "tiktok", widget: "string" }
+          - { label: "Số giấy phép kinh doanh (để trống nếu chưa có)", name: "gpkd", widget: "string", required: false }
+
+  # ---------- Danh mục menu ----------
+  - name: "categories"
+    label: "Danh mục menu"
+    files:
+      - name: "categories"
+        label: "Danh sách danh mục (menu dropdown)"
+        file: "src/_data/menu.json"
+        format: "json"
+        fields:
+          - label: "Danh mục"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Tên hiển thị", name: "name", widget: "string" }
+              - { label: "Đường dẫn (không dấu, không khoảng trắng)", name: "slug", widget: "string", hint: "Ví dụ: van-chuyen" }
+              - { label: "Mô tả ngắn", name: "description", widget: "text" }
+
+  # ---------- Dịch vụ / Khách sạn / Vận chuyển / Căn hộ ----------
+  - name: "services"
+    label: "Dịch vụ & sản phẩm (menu)"
+    folder: "src/services"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} ({{category}})"
+    sortable_fields: ["title", "order"]
+    fields:
+      - { label: "Tên dịch vụ / sản phẩm", name: "title", widget: "string" }
+      - label: "Danh mục menu"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Dịch vụ", value: "dich-vu" }
+          - { label: "Vận chuyển", value: "van-chuyen" }
+          - { label: "Khách sạn - Resort", value: "khach-san-resort" }
+          - { label: "Căn hộ - Villa", value: "can-ho-villa" }
+      - { label: "Thứ tự hiển thị trong menu (số nhỏ đứng trước)", name: "order", widget: "number", value_type: "int", default: 1 }
+      - { label: "Mô tả ngắn (hiện ở danh sách và SEO)", name: "description", widget: "text" }
+      - { label: "Ảnh đại diện", name: "image", widget: "image", required: false }
+      - { label: "Nội dung chi tiết", name: "body", widget: "markdown" }
+
+  # ---------- Cẩm nang / bài viết blog ----------
+  - name: "blog"
+    label: "Cẩm nang du lịch (bài viết)"
+    folder: "src/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["title", "date"]
+    fields:
+      - { label: "Tiêu đề bài viết", name: "title", widget: "string" }
+      - { label: "Ngày đăng", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "Mô tả ngắn (hiện ở danh sách và SEO)", name: "description", widget: "text" }
+      - { label: "Ảnh bìa", name: "image", widget: "image", required: false }
+      - { label: "Nội dung", name: "body", widget: "markdown" }
+
+  # ---------- Trang tĩnh (chính sách, điều khoản...) ----------
+  - name: "pages"
+    label: "Trang tĩnh"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Tiêu đề", name: "title", widget: "string" }
+      - { label: "Mô tả ngắn (SEO)", name: "description", widget: "text", required: false }
+      - { label: "Nội dung", name: "body", widget: "markdown" }

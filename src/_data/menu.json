@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "name": "Dịch vụ",
+      "slug": "dich-vu",
+      "description": "Combo Vinpearl, khách sạn - resort, tour trong ngày và các loại vé."
+    },
+    {
+      "name": "Vận chuyển",
+      "slug": "van-chuyen",
+      "description": "Thuê xe máy, ô tô tự lái, ô tô có tài xế và thuê cano."
+    },
+    {
+      "name": "Khách sạn - Resort",
+      "slug": "khach-san-resort",
+      "description": "Khách sạn 3, 4, 5 sao và resort tại Nha Trang và các điểm đến khác."
+    },
+    {
+      "name": "Căn hộ - Villa",
+      "slug": "can-ho-villa",
+      "description": "Căn hộ, villa và homestay tại Nha Trang, Dốc Lết."
+    }
+  ]
+}

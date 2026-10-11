@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Đảm bảo trang quản trị Decap CMS luôn truy cập được
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+# Không cho công cụ tìm kiếm lập chỉ mục trang quản trị
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

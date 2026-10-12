@@ -88,7 +88,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
    ========================================================================== */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(254, 252, 248, 0.94);
+  background: var(--warm-white);;
   border-bottom: 1px solid rgba(74, 155, 166, 0.15);
   height: var(--header-h);
   transition: box-shadow 0.3s;

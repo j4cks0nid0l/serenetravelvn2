@@ -1,14 +1,14 @@
 {
-  "name": "Serene Travel",
-  "tagline": "Serene, not standard",
-  "defaultDescription": "Serene Travel - Du lịch cá nhân hoá tại Nha Trang: combo Vinpearl, khách sạn, resort, tour, vé và thuê xe. Serene, not standard.",
-  "phone": "0327 818 196",
-  "phoneRaw": "0327818196",
+  "gpkd": "",
   "zaloUrl": "https://zalo.me/0327818196",
-  "email": "",
-  "address": "Đường Lư Giang, Phước Trung, Nam Nha Trang, Khánh Hòa",
+  "facebook": "https://www.facebook.com/serenetravelvn",
+  "name": "Serene Travel",
+  "phone": "0327 818 196",
+  "tagline": "Serene, not standard",
   "hours": "8:00 – 21:00 · Thứ 2 – Chủ nhật",
-  "facebook": "https://www.facebook.com/profile.php?id=61590191745958",
+  "address": "Đường Lư Giang, Phước Trung, Nam Nha Trang, Khánh Hòa",
   "tiktok": "https://www.tiktok.com/@serenetravelvn",
-  "gpkd": ""
+  "phoneRaw": "0327818196",
+  "defaultDescription": "Serene Travel - Du lịch cá nhân hoá tại Nha Trang: combo Vinpearl, khách sạn, resort, tour, vé và thuê xe. Serene, not standard.",
+  "email": "serenetravelvn@gmail.com"
 }
